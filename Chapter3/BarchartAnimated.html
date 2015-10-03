@@ -54,7 +54,7 @@ d3.tsv("pokemonByType.tsv", function(error, data) {
 
   svg.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(0,550)")
+      .attr("transform", "translate(0,500)")
       .call(xAxis);
 	  
 
@@ -73,7 +73,7 @@ d3.tsv("pokemonByType.tsv", function(error, data) {
       .attr("width", x.rangeBand())
 	  .transition().delay(function (d,i){ return i * 300;}).duration(300)
       .attr("y", function(d) { return y(d.amount); })
-      .attr("height", function(d) { return 550 - y(d.amount); })
+      .attr("height", function(d) { return 500 - y(d.amount); })
 	  ;
       
 });
